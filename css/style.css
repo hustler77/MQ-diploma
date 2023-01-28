@@ -141,19 +141,31 @@ body {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  }
 
-
+.trends-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #000000;
+  opacity: 0.6;
+  z-index: 1;
 }
 
 .trends-card {
+  position: relative;
   display: flex;
   align-items: flex-end;
   width: 24.8%;
   min-height: 320px;
   background-size: cover;
-
-
+  z-index: 0;
 }
+
+
 
 .trends-image-first {
   background-image: url(../images/trend1.jpg);
@@ -174,6 +186,7 @@ body {
 
 
 .trends-content {
+  position: relative;
   border: 3px solid #b59f5b;
   margin-left: 20px;
   margin-right: 22px;
@@ -181,6 +194,7 @@ body {
   padding-left: 35px;
   padding-top: 30px;
   padding-bottom: 45px;
+  z-index: 2;
 
 }
 
