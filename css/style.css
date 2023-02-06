@@ -84,20 +84,42 @@ body {
 
 }
 
-.radio {
-
+.radio-wrapper {
+  display: flex;
 }
 
+.radio-input {
+  appearance: none;
+}
 
+.radio-text {
+  font-size: 14px;
+  margin-top: 30px;
+}
+
+.radio-choice {
+  font-size: 14px;
+  margin-right: 15px;
+  
+
+}
 
 .radio-choice::before {
   content: "";
-  display: inline-block;
-  background-image: url(../svg/form-circle.svg);
+  width: 15px;
+  height: 15px;
+  background-image: url(../svg/form-empty-circle.svg);
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 5px;
+  background-size: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
 }
+
+.radio-input:checked + .radio-choice::before  {
+  background-image: url(../svg/form-circle.svg);
+ }
 
 
 
