@@ -10,6 +10,33 @@
 
 <body>
 	<div class="wrapper">
+		<section class="popup">
+			<form class="popup-content" action="#0">
+				<h2 class="trends-header">ваш фидбек</h2>
+				<label class="form-question-label">
+					<span class="form-question">Как часто Вы заходите на сайт?</span>
+					<select class="form-question-select">
+						<option selected>Почти каждый день</option>
+						<option>Иногда</option>
+						<option>Редко</option>
+						<option>Никогда</option>
+					</select>
+				</label>
+				<div class="radio">
+				<label class="form-radio">
+					<input class="radio-input" type="radio" name="choice">
+					<span class="radio-choice">Да</span>
+				</label>
+				<label class="form-radio">
+					<input class="radio-input" type="radio" name="choice">
+					<span class="radio-choice">Нет</span>
+				</label>
+				</div>
+
+
+			</form>
+
+		</section>
 		<header class="header">
 			<div class="container">
 				<div class="header-inner">
@@ -429,11 +456,11 @@
 			<article class= "goods-card">
 				<picture class="goods-picture">
 					<source media="(min-width: 1200px)"
-					srcset="images/shop-item-desk1.jpg">
+					srcset="images/shop-item-desk2.jpg">
 					<source media="(max-width: 640px)"
-					srcset="images/shop-item-mobile1.jpg">
+					srcset="images/shop-item-mobile2.jpg">
 					<source media="(min-width: 641px) and (max-width: 1199px)"
-					srcset="images/shop-item-tablet1.jpg">
+					srcset="images/shop-item-tablet2.jpg">
 					<img src="images/shop-item-desk1.jpg" alt="подушка">
 				</picture>
 				<div class= "goods-content">
@@ -444,22 +471,25 @@
 						<div class="goods-content-price">
 							<div class="goods-content-price-discount">3500 ₽</div>
 						</div>
-						<button class="price-button">в магазин</button>
+						<form class="shop-form" action="#0">
+							<button class="price-button" type="submit">в магазин</button>
+						</form>
+
 					</div>
 				</div>
 			</article>
 			<article class= "goods-card">
 				<picture class="goods-picture">
 					<source media="(min-width: 1200px)"
-					srcset="images/shop-item-desk1.jpg">
+					srcset="images/shop-item-desk3.jpg">
 					<source media="(max-width: 640px)"
-					srcset="images/shop-item-mobile1.jpg">
+					srcset="images/shop-item-mobile3.jpg">
 					<source media="(min-width: 641px) and (max-width: 1199px)"
-					srcset="images/shop-item-tablet1.jpg">
+					srcset="images/shop-item-tablet3.jpg">
 					<img src="images/shop-item-desk1.jpg" alt="подушка">
 				</picture>
 				<div class= "goods-content">
-					<h2 class="post-tags-header"><a class="post-tags-header-link" href="#0">шестиуголная рамка</a></h2>
+					<h2 class="post-tags-header"><a class="post-tags-header-link" href="#0">шестиугольная рамка</a></h2>
 					<div class="goods-description"><p>Необычная рамка для украшения дома из видео <a class="post-description-link" href="#0">"Как сделать рамку из подручных средств за 30 минут"</a></p>
 					</div>
 					<div class="price-block">
@@ -472,7 +502,7 @@
 				</div>
 			</article>
 		</section>
-		
+
 	</div>
 	<footer class="footer">
 		<address class="footer-icon">

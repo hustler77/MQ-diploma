@@ -27,6 +27,80 @@ body {
   margin: 0 auto;
 }
 
+.popup {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.popup::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000000;
+  opacity: 0.6;
+  z-index: 1;
+
+}
+
+.popup-content {
+  width: 390px;
+  position: absolute;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  z-index: 3;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 55px;
+}
+
+
+.form-question {
+  font-size: 14px;
+}
+
+.form-question-select {
+  width: 330px;
+  height: 48px;
+  justify-content: center;
+  appearance: none;
+  background-image: url(../svg/form-arrows.svg);
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 10px 17px;
+  background-color: #f3f7f6;
+  border: transparent;
+  padding-left: 15px;
+  margin-top: 5px;
+  font-size: 14px;
+
+}
+
+.radio {
+
+}
+
+
+
+.radio-choice::before {
+  content: "";
+  display: inline-block;
+  background-image: url(../svg/form-circle.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 5px;
+}
+
+
+
 .header {
   background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg);
   background-size: cover;
@@ -35,6 +109,7 @@ body {
   background-position: center center;
   position: relative;
   z-index: 0;
+  margin-bottom: 55px;
 }
 
 .header::after {
@@ -123,8 +198,6 @@ body {
   text-transform: uppercase;
   text-align: center;
   font-weight: 700;
-  margin-top: 55px;
-  margin-bottom: 28px;
 }
 
 .trends-header::after {
@@ -142,6 +215,7 @@ body {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  margin-top: 28px;
 }
 
 .trends-card::after {
@@ -188,7 +262,6 @@ body {
 
 .trends-content {
   position: relative;
-  
   margin-left: 20px;
   margin-right: 22px;
   margin-bottom: 15px;
@@ -208,7 +281,7 @@ body {
   top: 0;
   bottom: 0;
   opacity: 0.6;
-  z-index: 1;
+  z-index: -1;
 }
 
 .trends-card-header {
@@ -548,8 +621,11 @@ input[type="search"]::-webkit-search-results-decoration {
   flex-direction: column;
 }
 .goods-picture {
+  position: relative;
   margin-left: 22px;
   margin-bottom: -30px;
+  z-index: -2;
+
 }
 
 .goods-content {
@@ -560,9 +636,9 @@ input[type="search"]::-webkit-search-results-decoration {
   padding-left: 24px;
   padding-right: 22px;
   flex-grow: 1;
- }
+}
 
- .goods-content::after {
+.goods-content::after {
   border: 3px solid #b59f5b;
   content: "";
   position: absolute;
@@ -571,9 +647,9 @@ input[type="search"]::-webkit-search-results-decoration {
   top: 0;
   bottom: 0;
   opacity: 0.6;
-  z-index: 1;
+  z-index: -1;
 
- }
+}
 
 .goods-content-price {
   font-weight: 700;
@@ -593,6 +669,10 @@ input[type="search"]::-webkit-search-results-decoration {
   color: #b59f5b;
 }
 
+.post-description-link:hover {
+  text-decoration: underline;
+}
+
 .price-block {
   display: flex;
   justify-content: space-between;
@@ -609,6 +689,10 @@ input[type="search"]::-webkit-search-results-decoration {
   background-color: #b59f5b;
   cursor: pointer;
   border: none;
+}
+
+.price-button:hover {
+  background-color: #323232;
 }
 
 .footer {
