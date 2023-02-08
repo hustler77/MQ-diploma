@@ -35,6 +35,27 @@ body {
   width: 100%;
   height: 100%;
   z-index: 2;
+  display: none;
+}
+
+.popup-close {
+  position: absolute;
+  right: 0px;
+  top: -30px;
+}
+
+.popup-close-button {
+  background-image: url(../svg/form-x.svg);
+  width: 18px;
+  height: 18px;
+  border: transparent;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  right -50px;
+}
+
+.popup-close-button:hover {
+  cursor: pointer;
 }
 
 .popup::before {
@@ -47,6 +68,7 @@ body {
   background-color: #000000;
   opacity: 0.6;
   z-index: 1;
+
 
 }
 
@@ -65,10 +87,11 @@ body {
 
 .form-question {
   font-size: 14px;
+  margin-top: 30px;
 }
 
 .form-question-select {
-  width: 330px;
+  width: 100%;
   height: 48px;
   justify-content: center;
   appearance: none;
@@ -81,6 +104,7 @@ body {
   padding-left: 15px;
   margin-top: 5px;
   font-size: 14px;
+  color: #9ea09f;
 
 }
 
@@ -92,14 +116,12 @@ body {
   appearance: none;
 }
 
-.radio-text {
-  font-size: 14px;
-  margin-top: 30px;
-}
+
 
 .radio-choice {
   font-size: 14px;
   margin-right: 15px;
+  margin-left: -5px;
   
 
 }
@@ -119,7 +141,45 @@ body {
 
 .radio-input:checked + .radio-choice::before  {
   background-image: url(../svg/form-circle.svg);
- }
+}
+
+.textarea-input {
+  width: 100%;
+  min-height: 130px;
+  padding-left: 20px;
+  padding-top: 20px;
+  appearance: none;
+  border: transparent;
+  background-color: #f3f7f6;
+  resize: none;
+  margin-top: 5px;
+  margin-bottom: 25px;
+}
+
+.popup-button {
+  margin-bottom: 50px;
+}
+
+::-webkit-input-placeholder {
+  color:#9ea09f;
+  font-size: 15px;
+  font-family: OpenSans;
+  src: url(../fonts/OpenSans-Regular.woff);
+  font-weight: 400;
+  font-style: normal;
+
+}
+::-moz-input-placeholder {
+  color:#9ea09f;
+  font-size: 15px;
+  font-family: OpenSans;
+  src: url(../fonts/OpenSans-Regular.woff);
+  font-weight: 400;
+  font-style: normal;
+
+  
+
+}
 
 
 
@@ -718,7 +778,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .footer {
-  max-width: 1200px;
+  min-width: 1200px;
   margin: 0 auto;
   padding-right: 15px;
   padding-left: 15px;
