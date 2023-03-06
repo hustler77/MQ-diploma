@@ -73,7 +73,7 @@ body {
 }
 
 .popup-content {
-  width: 390px;
+  max-width: 390px;
   position: absolute;
   background-color: #ffffff;
   display: flex;
@@ -264,7 +264,7 @@ body {
   text-align: center;
   padding-top: 100px;
   padding-bottom: 128px;
-  width: 700px;
+  max-width: 700px;
   margin: 0 auto;
 }
 
@@ -272,15 +272,13 @@ body {
 .content {
   display: flex;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1170px;
   margin-top: 60px;
   margin-bottom: 56px;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 .main-content {
-  max-width: 790px;
+  width: 790px;
 }
 
 .trends-header {
@@ -350,13 +348,14 @@ body {
 
 
 .trends-content {
+  display: flex;
+  flex-direction: column;
   position: relative;
-  margin-left: 20px;
-  margin-right: 22px;
-  margin-bottom: 15px;
-  padding-left: 35px;
-  padding-top: 30px;
-  padding-bottom: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin: auto 20px 15px 20px;
+  padding: 30px;
   z-index: 2;
 
 }
@@ -374,6 +373,7 @@ body {
 }
 
 .trends-card-header {
+  display: flex;
   font-size: 20px;
   line-height: 1.2;
 }
@@ -390,17 +390,12 @@ body {
 }
 
 
-
-
-
-
-
 .main-posts {
   display: flex;
 }
 
 .post-picture {
-  display: flex;
+
   margin-bottom: 55px;
 }
 
@@ -477,6 +472,8 @@ body {
 }
 
 .aside-content {
+  display: flex;
+  flex-direction: column;
   width: 272px;
   margin-left: 118px;
 }
@@ -698,33 +695,44 @@ input[type="search"]::-webkit-search-results-decoration {
 .goods {
   display: flex;
   justify-content: space-between;
-  max-width: 1200px;
+  max-width: 1170px;
   margin: 0 auto;
-  padding-right: 15px;
-  padding-left: 15px;
   margin-bottom: 64px;
 }
 
 .goods-card {
   display: flex;
   flex-direction: column;
+  width: 33%;
+  align-items: center;
 }
+
 .goods-picture {
-  position: relative;
-  margin-left: 22px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+}
+
+.goods-image {
   margin-bottom: -30px;
-  z-index: -2;
+  width: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  
+  
 
 }
 
 .goods-content {
   position: relative;
-  max-width: 345px;
   padding-top: 53px;
   padding-bottom: 23px;
   padding-left: 24px;
   padding-right: 22px;
   flex-grow: 1;
+  z-index: 2;
 }
 
 .goods-content::after {
@@ -785,10 +793,8 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .footer {
-  min-width: 1200px;
+  max-width: 1170px;
   margin: 0 auto;
-  padding-right: 15px;
-  padding-left: 15px;
 }
 
 .footer-icon {
@@ -891,8 +897,6 @@ input[type="search"]::-webkit-search-results-decoration {
 .wrapper {
   max-width: 1199px;
   min-width: 641px;
-
-
 }
 
 .header {
@@ -900,15 +904,12 @@ input[type="search"]::-webkit-search-results-decoration {
 
 }
 
-.header-inner {
-
-
+.header-title {
+  display: flex;
+  width: 100%;
 }
 
-.container {
-  max-width: 1199px;
-  min-width: 641px;
-}
+
 
 .logo {
   margin-left: 35px;
@@ -937,58 +938,97 @@ input[type="search"]::-webkit-search-results-decoration {
 .content {
   width: 100%;
   justify-content: space-between;
-  padding-left: 30px;
-  padding-right: 30px;
-
-
+  padding-left: 35px;
+  padding-right: 35px;
 
 }
 
 .main-content {
+
   display: flex;
   flex-direction: column;
-
+  width: calc(100% - 272px);
+  padding-right: 30px;
+  
 }
 
 
 
 .main-posts {
   flex-direction: column;
-  
+  width: 100%;
+
+}
+
+.underline::after {
+ content: "";
+ display: block;
+ margin: 10px auto 25px;
+ width: 100%;
+ height: 3px;
+ background-color: #eeeeee;
+ z-index: -1;
+ opacity: 0.4;
 }
 
 .post-content {
   margin: 0;
-
+  width: 100%;
 
 }
 
 .post-picture {
-
-
+  width: 100%;
 
 }
 
 .post-picture-image {
-  max-width: 381px;
-  max-height: 297px;
-
-
-
+  width: 100%;
 }
 
+
+
 .aside-content {
-  margin: 0;
+ margin: 0;
+
 }
 
 .goods {
+  padding-left: 35px;
+  padding-right: 35px;
   flex-wrap: wrap;
 }
 
-.footer {
-  max-width: 1199px;
-  min-width: 641px;
+
+.goods-card:nth-child(n + 3) {
+  margin-top: 25px;
 }
+
+.goods-card {
+  width: 48%;
+
+}
+
+.footer {
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+@media (min-width: 641px) and (max-width: 1199px) and (orientation: landscape) {
+
+  .trends-card {
+    width: 24.8%;
+  }
+
+.trends-content {
+
+}
+
+  }
+
+
+
+
 
 
 
