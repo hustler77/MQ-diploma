@@ -425,6 +425,11 @@ body {
     margin-top: 6px;
 }
 
+.post-tags-header-link:hover {
+    color: #ae9e5f;
+}
+
+
 .post-tags-header-link {
     text-decoration: none;
     font-weight: 700;
@@ -517,9 +522,6 @@ body {
     color: #000000;
 }
 
-.post-content-header:hover {
-    color: #b59f5b;
-}
 
 .visually-hidden {
     position: absolute;
@@ -720,6 +722,12 @@ input[type="search"]::-webkit-search-results-decoration {
     z-index: 2;
     border: 3px solid #cec59f;
   }
+
+  .goods-tags-header-link {
+    text-decoration: none;
+    font-weight: 700;
+    color: #0f0d0e;
+}
 
 
 
