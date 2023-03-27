@@ -70,7 +70,7 @@ body {
 
 .popup-content {
     max-width: 390px;
-    position: absolute;
+    position: relative;
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -149,9 +149,7 @@ body {
     margin-bottom: 25px;
 }
 
-.popup-button {
-    margin-bottom: 50px;
-}
+
 
 ::-webkit-input-placeholder {
     color: #9ea09f;
@@ -236,7 +234,7 @@ body {
 
 .menu-link:hover {
     text-decoration: underline;
-    color: #e1d9bd;
+    color: #eeeeee;
 }
 
 .menu-item {
@@ -378,6 +376,10 @@ body {
 
 }
 
+.trends-card-header-link:hover {
+  color: #ae9e5f;
+}
+
 
 .main-posts {
     display: flex;
@@ -409,6 +411,12 @@ body {
     text-transform: uppercase;
     font-size: 14px;
 }
+.post-tags-link:hover {
+  text-decoration: underline;
+  
+}
+
+
 
 .post-tags-header {
     font-size: 20px;
@@ -552,7 +560,7 @@ body {
     background-repeat: no-repeat;
     background-size: 18px;
     background-position: center;
-    background-color: #b59f5b;
+    background-color: #ae9e5f;
     cursor: pointer;
     border: 1px solid transparent;
 }
@@ -586,7 +594,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .email-input:focus {
-    border: 1px solid #b59f5b;
+    border: 1px solid #ae9e5f;
 }
 
 .email-button {
@@ -596,14 +604,15 @@ input[type="search"]::-webkit-search-results-decoration {
     text-transform: uppercase;
     font-weight: bold;
     color: #ffffff;
-    background-color: #b59f5b;
+    background-color: #ae9e5f;
     cursor: pointer;
     height: 48px;
     margin-top: 17px;
+    margin-bottom: 55px;
 }
 
 .email-button:hover {
-    background-color: #323232;
+    background-color: #353535;
 }
 
 .tags {
@@ -668,7 +677,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .themes-content-item-link:hover {
-    color: #b59f5b;
+    color: #ae9e5f;
 }
 
 .goods {
@@ -709,20 +718,10 @@ input[type="search"]::-webkit-search-results-decoration {
     padding-right: 22px;
     flex-grow: 1;
     z-index: 2;
-}
+    border: 3px solid #cec59f;
+  }
 
-.goods-content::after {
-    border: 3px solid #b59f5b;
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    opacity: 0.6;
-    z-index: -1;
 
-}
 
 .goods-content-price {
     font-weight: 700;
@@ -759,7 +758,7 @@ input[type="search"]::-webkit-search-results-decoration {
     text-transform: uppercase;
     font-weight: bold;
     color: #ffffff;
-    background-color: #b59f5b;
+    background-color: #ae9e5f;
     cursor: pointer;
     border: none;
 }
